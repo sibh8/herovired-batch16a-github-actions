@@ -1,6 +1,10 @@
 name: My First Workflow
 on:
   workflow_dispatch:
+    inputs:
+      my_input:
+        type: string
+        description: "My manual input"
   push:
     branches:
     - main
@@ -21,6 +25,10 @@ jobs:
 
     - name: Run Script
       run: sh ./scripts/script.sh
+
+    - name: Print Input
+      run: |
+        echo "The input value is: ${{ github.event.inputs.my_input }}"
 
     - name: Print GitHub context info
       run: |
