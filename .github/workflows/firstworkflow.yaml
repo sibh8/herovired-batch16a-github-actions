@@ -17,3 +17,6 @@ jobs:
       run: |
         echo "Hello, World!"
         echo "This is my first workflow"
+
+    - name: Run Script
+      run: sh ./scripts/script.sh
