@@ -45,3 +45,12 @@ jobs:
         echo "  Run number:             ${{ github.run_number }}"
         echo "  Run ID:                 ${{ github.run_id }}"
         echo "=============================================="
+
+  second-run:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Say Hello
+      run: echo "Hello, World! Again"
