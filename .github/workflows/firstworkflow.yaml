@@ -48,6 +48,7 @@ jobs:
 
   second-run:
     runs-on: ubuntu-latest
+    needs: first-run
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
